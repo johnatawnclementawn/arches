@@ -9,7 +9,7 @@ module.exports = {
         "text": "Path.resolve(__dirname, `${APP_ROOT}/media/node_modules/requirejs-text/text`)",
         "jquery": "Path.resolve(__dirname, `${APP_ROOT}/media/node_modules/jquery/dist/jquery.min`)",
         "js-cookie": "Path.resolve(__dirname, `${APP_ROOT}/media/node_modules/js-cookie/src/js.cookie`)",
-        "select2": "Path.resolve(__dirname, `${APP_ROOT}/media/node_modules/select2/select2`)",
+        "selectWoo": "Path.resolve(__dirname, `${APP_ROOT}/media/node_modules/select-woo/dist/js/selectWoo.full.min`)",
         "bootstrap": "Path.resolve(__dirname, `${APP_ROOT}/media/node_modules/bootstrap/dist/js/bootstrap.min`)",
         "jquery-ui": "Path.resolve(__dirname, `${APP_ROOT}/media/node_modules/jqueryui/jquery-ui.min`)",
         "backbone": "Path.resolve(__dirname, `${APP_ROOT}/media/node_modules/backbone/backbone-min`)",

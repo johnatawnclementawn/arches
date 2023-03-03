@@ -2,7 +2,8 @@ define([
     'jquery',
     'knockout',
     'underscore',
-    'select2'
+    'select2',
+    'selectWoo'
 ], function($, ko, _) {
     ko.bindingHandlers.select2Query = {
         init: function(el, valueAccessor, allBindingsAccessor) {
@@ -17,14 +18,14 @@ define([
             var value = select2Config.value;
 
             ko.utils.domNodeDisposal.addDisposeCallback(el, function() {
-                $(el).select2('destroy');
+                $(el).selectWoo('destroy');
             });
 
             var placeholder = select2Config.placeholder;
             if (ko.isObservable(placeholder)) {
                 placeholder.subscribe(function(newItems) {
                     select2Config.placeholder = newItems;
-                    $(el).select2("destroy").select2(select2Config);
+                    $(el).selectWoo("destroy").selectWoo(select2Config);
                 });
                 select2Config.placeholder = select2Config.placeholder();
                 if (select2Config.allowClear) {
@@ -33,13 +34,13 @@ define([
             }
 
             //select2Config.value = value();
-            $(el).select2(select2Config);
+            $(el).selectWoo(select2Config);
 
             if (value) {
-                $(el).select2("val", value());
+                $(el).selectWoo("val", value());
                 value.subscribe(function(newVal) {
                     select2Config.value = newVal;
-                    $(el).select2("val", newVal);
+                    $(el).selectWoo("val", newVal);
                 }, this);
                 $(el).on("change", function(val) {
                     if (val.val === "") {
@@ -50,10 +51,10 @@ define([
             }
 
             if (ko.unwrap(select2Config.disabled)) {
-                $(el).select2("disable");
+                $(el).selectWoo("disable");
                 select2Config.disabled.subscribe(function(val){
                     if (val === false) {
-                        $(el).select2("enable");
+                        $(el).selectWoo("enable");
                     }
                 });
             }
