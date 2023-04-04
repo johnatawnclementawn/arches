@@ -52,6 +52,15 @@ define([
                             $element.trigger('chosen:updated');
                         });
                     }
+
+                    if (propName === 'options' && prop[0].label) {
+                        prop.forEach(function(option) {
+                            console.log('option', option);
+                            console.log('option.label', option.label);
+                            console.log('Element', $element);
+                            $element.attr('label', option.label)
+                        });
+                    }
                 }
             });
         }

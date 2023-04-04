@@ -8,17 +8,17 @@
         data-bind="
             value: op, 
             chosen: {width: '100%', disable_search_threshold: 15},
-            attr: {'aria-label': '{% trans 'Search Criteria' %}'},
+            attr: {'aria-label': '{% trans 'Search Criteria' %}', role: 'option'},
             optionsText: 'text',
             optionsValue: 'value',
             options: [
-                { text: '=', value: 'eq' },
-                { text: '&gt;', value: 'gt' },
-                { text: '&lt;', value: 'lt' },
-                { text: '&ge;', value: 'gte' },
-                { text: '&le;', value: 'lte' },
-                { text: $root.translations.hasNoValue, value: 'null' },
-                { text: $root.translations.hasAnyValue, value: 'not_null' },
+                { text: '=', value: 'eq', label: 'Equal' },
+                { text: '&gt;', value: 'gt', label: 'Greater-than' },
+                { text: '&lt;', value: 'lt', label: 'Less-than' },
+                { text: '&ge;', value: 'gte', label: 'Greater-than or equal to' },
+                { text: '&le;', value: 'lte', label: 'Less-than or equal to' },
+                { text: $root.translations.hasNoValue, value: 'null', label: 'Has no value' },
+                { text: $root.translations.hasAnyValue, value: 'not_null', label: 'Has any value' },
             ],
         "
     ></select>
