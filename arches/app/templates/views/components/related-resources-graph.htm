@@ -6,7 +6,8 @@
 
 {% block tabs %}
 <div role="tablist">
-    <div id="infoTabButton" class="workbench-card-sidebar-tab" tabindex="0" role="tab" 
+    <div id="infoTabButton" class="workbench-card-sidebar-tab" tabindex="0" role="tab"
+        data-placement="auto" data-toggle="tooltip" 
         data-bind="onEnterkeyClick, onSpaceClick, click: function(data, event) {
             toggleTab('information');
             $root.handleEscKey(event.currentTarget, '#infoTabId'); 
@@ -16,6 +17,7 @@
             'aria-label': $root.translations.info,
             'aria-expanded': (activeTab() === 'information').toString(),
             'aria-controls': 'infoTabId',
+            'data-original-title': $root.translations.info,
         }"
     >
         <i class="fa fa-info"></i>
@@ -25,6 +27,7 @@
         ></span>
     </div>
     <div id="searchTabButton" class="workbench-card-sidebar-tab" tabindex="0" role="tab" 
+        data-placement="auto" data-toggle="tooltip" 
         data-bind="onEnterkeyClick, onSpaceClick, click: function() {
             toggleTab('search');
             $root.handleEscKey(event.currentTarget, '#searchTabId'); 
@@ -34,6 +37,7 @@
             'aria-label': $root.translations.search,
             'aria-expanded': (activeTab() === 'search').toString(),
             'aria-controls': 'searchTabId',
+            'data-original-title': $root.translations.search,
         }"
     >
         <i class="fa fa-search"></i>
@@ -44,6 +48,7 @@
     </div>
     {% comment %} Uncomment this section to show additional tabs...
     <div id="analyzeTabButton" class="workbench-card-sidebar-tab" tabindex="0" role="tab" 
+        data-placement="auto" data-toggle="tooltip" 
         data-bind="onEnterkeyClick, onSpaceClick, click: function() {
             toggleTab('analyze');
             $root.handleEscKey(event.currentTarget, '#analyzeTabId');
@@ -53,6 +58,7 @@
             'aria-label': $root.translations.analyze,
             'aria-expanded': (activeTab() === 'analyze').toString(),
             'aria-controls': 'analyzeTabId',
+            'data-original-title': $root.translations.analyze,
         }"
     >
         <i class="fa fa-line-chart"></i>
@@ -62,6 +68,7 @@
         ></span>
     </div>
     <div id="settingsTabButton" class="workbench-card-sidebar-tab" tabindex="0" role="tab" 
+        data-placement="auto" data-toggle="tooltip" 
         data-bind="onEnterkeyClick, onSpaceClick, click: function() {
             toggleTab('settings');
             $root.handleEscKey(event.currentTarget, '#settingsTabId');
@@ -71,6 +78,7 @@
             'aria-label': $root.translations.settings,
             'aria-expanded': (activeTab() === 'settings').toString(),
             'aria-controls': 'settingsTabId',
+            'data-original-title': $root.translations.settings,
         }"
     >
         <i class="fa fa-cog"></i>
@@ -81,6 +89,7 @@
     </div>
     {% endcomment %}
     <div id="legendTabButton" class="workbench-card-sidebar-tab" tabindex="0" role="tab" 
+        data-placement="auto" data-toggle="tooltip" 
         data-bind="onEnterkeyClick, onSpaceClick, click: function() {
             toggleTab('legend');
             $root.handleEscKey(event.currentTarget, '#legendTabId'); 
@@ -90,6 +99,7 @@
             'aria-label': $root.translations.legend,
             'aria-expanded': (activeTab() === 'legend').toString(),
             'aria-controls': 'legendTabId',
+            'data-original-title': $root.translations.legend,
         }"
     >
         <i class="fa fa-list"></i>
